@@ -1,216 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Archetype Assessment</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
     h1 { text-align: center; }
-    .question { margin-bottom: 15px; }
+    .question { margin-bottom: 20px; }
     .question label { display: block; font-weight: bold; margin-bottom: 5px; }
-    select { width: 100px; }
+    select { width: 150px; padding: 5px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 1em; }
     #results { margin-top: 30px; font-size: 1.2em; font-weight: bold; }
-    button { margin-top: 20px; padding: 10px 20px; }
   </style>
 </head>
 <body>
 
-<h1>Masculine Archetype Assessment</h1>
-<form id="quizForm">
+  <h1>Masculine Archetype Assessment</h1>
+  <form id="quizForm">
 
-  <div class="question" data-type="warrior">
-    <label for="q1">I willingly put myself in uncomfortable situations to grow stronger.</label>
-    <select id="q1">
-      <option value="">Select</option>
-      <option value="1">1 - Strongly Disagree</option>
-      <option value="2">2 - Disagree</option>
-      <option value="3">3 - Neutral</option>
-      <option value="4">4 - Agree</option>
-      <option value="5">5 - Strongly Agree</option>
-    </select>
-  </div>
+    <!-- Q1 -->
+    <div class="question" data-type="warrior">
+      <label for="q1">I willingly put myself in uncomfortable situations to grow stronger.</label>
+      <select id="q1">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q2">I often take on the responsibility of ensuring others have what they need.</label>
-    <select id="q2">...</select>
-  </div>
+    <!-- Q2 -->
+    <div class="question" data-type="merchant">
+      <label for="q2">I often take on the responsibility of ensuring others have what they need.</label>
+      <select id="q2">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q3">I reflect often on the kind of legacy I’m building.</label>
-    <select id="q3">...</select>
-  </div>
+    <!-- Q3 -->
+    <div class="question" data-type="noble">
+      <label for="q3">I reflect often on the kind of legacy I’m building.</label>
+      <select id="q3">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q4">I get satisfaction from building, growing, or optimizing something.</label>
-    <select id="q4">...</select>
-  </div>
+    <!-- Q4 -->
+    <div class="question" data-type="merchant">
+      <label for="q4">I get satisfaction from building, growing, or optimizing something.</label>
+      <select id="q4">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q5">I don’t hesitate to call out injustice, even when it’s unpopular.</label>
-    <select id="q5">...</select>
-  </div>
+    <!-- Q5 -->
+    <div class="question" data-type="warrior">
+      <label for="q5">I don’t hesitate to call out injustice, even when it’s unpopular.</label>
+      <select id="q5">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q6">I value inner stillness, patience, and humility in leadership.</label>
-    <select id="q6">...</select>
-  </div>
+    <!-- Q6 -->
+    <div class="question" data-type="noble">
+      <label for="q6">I value inner stillness, patience, and humility in leadership.</label>
+      <select id="q6">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q7">I remain calm and practical even in emotionally charged situations.</label>
-    <select id="q7">...</select>
-  </div>
+    <!-- Q7 -->
+    <div class="question" data-type="merchant">
+      <label for="q7">I remain calm and practical even in emotionally charged situations.</label>
+      <select id="q7">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q8">I thrive under pressure and do not shy away from confrontation.</label>
-    <select id="q8">...</select>
-  </div>
+    <!-- Q8 -->
+    <div class="question" data-type="warrior">
+      <label for="q8">I thrive under pressure and do not shy away from confrontation.</label>
+      <select id="q8">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q9">I strive to be a person of integrity, even when no one is watching.</label>
-    <select id="q9">...</select>
-  </div>
+    <!-- Q9 -->
+    <div class="question" data-type="noble">
+      <label for="q9">I strive to be a person of integrity, even when no one is watching.</label>
+      <select id="q9">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q10">I naturally look for ways to improve systems, increase efficiency, or build sustainable value.</label>
-    <select id="q10">...</select>
-  </div>
+    <!-- Q10 -->
+    <div class="question" data-type="merchant">
+      <label for="q10">I naturally look for ways to improve systems, increase efficiency, or build sustainable value.</label>
+      <select id="q10">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q11">I have been told I possess strong willpower or resilience.</label>
-    <select id="q11">...</select>
-  </div>
+    <!-- Q11 -->
+    <div class="question" data-type="warrior">
+      <label for="q11">I have been told I possess strong willpower or resilience.</label>
+      <select id="q11">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q12">I am often asked for advice or counsel in tough situations.</label>
-    <select id="q12">...</select>
-  </div>
+    <!-- Q12 -->
+    <div class="question" data-type="noble">
+      <label for="q12">I am often asked for advice or counsel in tough situations.</label>
+      <select id="q12">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q13">I think in terms of strategy, trade-offs, and long-term returns.</label>
-    <select id="q13">...</select>
-  </div>
+    <!-- Q13 -->
+    <div class="question" data-type="merchant">
+      <label for="q13">I think in terms of strategy, trade-offs, and long-term returns.</label>
+      <select id="q13">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q14">I feel a strong inner drive to defend those who cannot defend themselves.</label>
-    <select id="q14">...</select>
-  </div>
+    <!-- Q14 -->
+    <div class="question" data-type="warrior">
+      <label for="q14">I feel a strong inner drive to defend those who cannot defend themselves.</label>
+      <select id="q14">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q15">I aim to be an example others can look to during chaos or uncertainty.</label>
-    <select id="q15">...</select>
-  </div>
+    <!-- Q15 -->
+    <div class="question" data-type="noble">
+      <label for="q15">I aim to be an example others can look to during chaos or uncertainty.</label>
+      <select id="q15">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q16">I see relationships, time, and money all as investments.</label>
-    <select id="q16">...</select>
-  </div>
+    <!-- Q16 -->
+    <div class="question" data-type="merchant">
+      <label for="q16">I see relationships, time, and money all as investments.</label>
+      <select id="q16">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q17">I train or discipline myself regularly—mentally, physically, or emotionally.</label>
-    <select id="q17">...</select>
-  </div>
+    <!-- Q17 -->
+    <div class="question" data-type="warrior">
+      <label for="q17">I train or discipline myself regularly—mentally, physically, or emotionally.</label>
+      <select id="q17">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q18">I seek wisdom before I seek victory.</label>
-    <select id="q18">...</select>
-  </div>
+    <!-- Q18 -->
+    <div class="question" data-type="noble">
+      <label for="q18">I seek wisdom before I seek victory.</label>
+      <select id="q18">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q19">People often rely on me to solve logistical or practical problems.</label>
-    <select id="q19">...</select>
-  </div>
+    <!-- Q19 -->
+    <div class="question" data-type="merchant">
+      <label for="q19">People often rely on me to solve logistical or practical problems.</label>
+      <select id="q19">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q20">I would rather endure hardship than compromise my values.</label>
-    <select id="q20">...</select>
-  </div>
+    <!-- Q20 -->
+    <div class="question" data-type="warrior">
+      <label for="q20">I would rather endure hardship than compromise my values.</label>
+      <select id="q20">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q21">I make decisions not just based on logic, but with consideration of justice and empathy.</label>
-    <select id="q21">...</select>
-  </div>
+    <!-- Q21 -->
+    <div class="question" data-type="noble">
+      <label for="q21">I make decisions not just based on logic, but with consideration of justice and empathy.</label>
+      <select id="q21">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q22">I’m known for my discipline when it comes to budgeting, planning, or executing tasks.</label>
-    <select id="q22">...</select>
-  </div>
+    <!-- Q22 -->
+    <div class="question" data-type="merchant">
+      <label for="q22">I’m known for my discipline when it comes to budgeting, planning, or executing tasks.</label>
+      <select id="q22">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q23">I take decisive action, even in the face of fear or uncertainty.</label>
-    <select id="q23">...</select>
-  </div>
+    <!-- Q23 -->
+    <div class="question" data-type="warrior">
+      <label for="q23">I take decisive action, even in the face of fear or uncertainty.</label>
+      <select id="q23">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q24">I naturally take on roles where I can guide, mentor, or lead others.</label>
-    <select id="q24">...</select>
-  </div>
+    <!-- Q24 -->
+    <div class="question" data-type="noble">
+      <label for="q24">I naturally take on roles where I can guide, mentor, or lead others.</label>
+      <select id="q24">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q25">I understand the connection between strategy and sustainability in everyday life.</label>
-    <select id="q25">...</select>
-  </div>
+    <!-- Q25 -->
+    <div class="question" data-type="merchant">
+      <label for="q25">I understand the connection between strategy and sustainability in everyday life.</label>
+      <select id="q25">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q26">I find peace in structure, routine, and purpose.</label>
-    <select id="q26">...</select>
-  </div>
+    <!-- Q26 -->
+    <div class="question" data-type="warrior">
+      <label for="q26">I find peace in structure, routine, and purpose.</label>
+      <select id="q26">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q27">I can de-escalate tension and mediate conflict effectively.</label>
-    <select id="q27">...</select>
-  </div>
+    <!-- Q27 -->
+    <div class="question" data-type="noble">
+      <label for="q27">I can de-escalate tension and mediate conflict effectively.</label>
+      <select id="q27">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="merchant">
-    <label for="q28">I am quick to spot opportunities others miss.</label>
-    <select id="q28">...</select>
-  </div>
+    <!-- Q28 -->
+    <div class="question" data-type="merchant">
+      <label for="q28">I am quick to spot opportunities others miss.</label>
+      <select id="q28">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="warrior">
-    <label for="q29">I believe strength exists to serve and protect, not dominate.</label>
-    <select id="q29">...</select>
-  </div>
+    <!-- Q29 -->
+    <div class="question" data-type="warrior">
+      <label for="q29">I believe strength exists to serve and protect, not dominate.</label>
+      <select id="q29">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <div class="question" data-type="noble">
-    <label for="q30">I believe true authority is earned, not demanded.</label>
-    <select id="q30">...</select>
-  </div>
+    <!-- Q30 -->
+    <div class="question" data-type="noble">
+      <label for="q30">I believe true authority is earned, not demanded.</label>
+      <select id="q30">
+        <option value="">Select</option>
+        <option value="1">1 – Strongly Disagree</option>
+        <option value="2">2 – Disagree</option>
+        <option value="3">3 – Neutral</option>
+        <option value="4">4 – Agree</option>
+        <option value="5">5 – Strongly Agree</option>
+      </select>
+    </div>
 
-  <button type="button" onclick="calculateScores()">Submit</button>
-</form>
+    <button type="button" onclick="calculateScores()">Submit</button>
+  </form>
 
-<div id="results"></div>
+  <div id="results"></div>
 
-<script>
-  function calculateScores() {
-    const scores = { merchant: 0, warrior: 0, noble: 0 };
-    let incomplete = false;
+  <script>
+    function calculateScores() {
+      const scores = { merchant: 0, warrior: 0, noble: 0 };
+      let incomplete = false;
 
-    document.querySelectorAll('.question').forEach((q, idx) => {
-      const type = q.dataset.type;
-      const select = q.querySelector('select');
-      const value = parseInt(select.value);
+      document.querySelectorAll('.question').forEach(q => {
+        const type = q.dataset.type;
+        const select = q.querySelector('select');
+        const value = parseInt(select.value, 10);
+        if (isNaN(value)) {
+          incomplete = true;
+        } else {
+          scores[type] += value;
+        }
+      });
 
-      if (isNaN(value)) incomplete = true;
-      else scores[type] += value;
-    });
+      if (incomplete) {
+        alert('Please answer all questions before submitting.');
+        return;
+      }
 
-    if (incomplete) {
-      alert('Please answer all questions before submitting.');
-      return;
+      const sorted = Object.entries(scores)
+        .sort((a, b) => b[1] - a[1]);
+
+      const resultText = `
+        Your Primary Archetype: <strong>${capitalize(sorted[0][0])}</strong><br>
+        Secondary Archetype: <strong>${capitalize(sorted[1][0])}</strong><br>
+        Tertiary Archetype: <strong>${capitalize(sorted[2][0])}</strong>
+      `;
+      document.getElementById('results').innerHTML = resultText;
     }
 
-    const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-
-    document.getElementById('results').innerHTML =
-      `Your Primary Archetype: <strong>${capitalize(sorted[0][0])}</strong><br>` +
-      `Secondary Archetype: <strong>${capitalize(sorted[1][0])}</strong><br>` +
-      `Tertiary Archetype: <strong>${capitalize(sorted[2][0])}</strong>`;
-  }
-
-  function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-</script>
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+  </script>
 
 </body>
 </html>
